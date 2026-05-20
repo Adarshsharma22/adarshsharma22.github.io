@@ -21,7 +21,7 @@ export const Home = () => {
       
         <main>
         
-          <div className=" md:grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 md:mt-18 mt-20  auto-rows-[200px]">
+          <div className="flex flex-col gap-6 md:grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 md:gap-4 md:mt-18 mt-27  auto-rows-[200px]">
           <Header/>
             <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -50,12 +50,6 @@ export const Home = () => {
               <MyMusic />
             </motion.div>
 
-            <div className="block md:hidden my-4 flex items-center gap-4">
-              <div className="flex-1 h-px bg-gradient-to-r from-transparent to-black/40 dark:to-white/40"></div>
-              <div className="w-2 h-2 rounded-full bg-blue-500/50"></div>
-              <div className="flex-1 h-px bg-gradient-to-r from-black/40 dark:from-white/40 to-transparent"></div>
-            </div>
-
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -65,11 +59,7 @@ export const Home = () => {
               <About />
             </motion.div>
 
-            <div className="block md:hidden my-4 flex items-center gap-4">
-              <div className="flex-1 h-px bg-gradient-to-r from-transparent to-black/40 dark:to-white/40"></div>
-              <div className="w-2 h-2 rounded-full bg-blue-500/50"></div>
-              <div className="flex-1 h-px bg-gradient-to-r from-black/40 dark:from-white/40 to-transparent"></div>
-            </div>
+            
 
             <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -80,11 +70,7 @@ export const Home = () => {
               <Skills />
             </motion.div>
 
-            <div className="block md:hidden my-4 flex items-center gap-4">
-              <div className="flex-1 h-px bg-gradient-to-r from-transparent to-black/40 dark:to-white/40"></div>
-              <div className="w-2 h-2 rounded-full bg-blue-500/50"></div>
-              <div className="flex-1 h-px bg-gradient-to-r from-black/40 dark:from-white/40 to-transparent"></div>
-            </div>
+           
 
             <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -95,11 +81,7 @@ export const Home = () => {
               <MyProject />
             </motion.div>
 
-            <div className="block md:hidden my-4 flex items-center gap-4">
-              <div className="flex-1 h-px bg-gradient-to-r from-transparent to-black/40 dark:to-white/40"></div>
-              <div className="w-2 h-2 rounded-full bg-blue-500/50"></div>
-              <div className="flex-1 h-px bg-gradient-to-r from-black/40 dark:from-white/40 to-transparent"></div>
-            </div>
+            
 
             <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -110,11 +92,7 @@ export const Home = () => {
               <Experience />
             </motion.div>
 
-            <div className="block md:hidden my-4 flex items-center gap-4">
-              <div className="flex-1 h-px bg-gradient-to-r from-transparent to-black/40 dark:to-white/40"></div>
-              <div className="w-2 h-2 rounded-full bg-blue-500/50"></div>
-              <div className="flex-1 h-px bg-gradient-to-r from-black/40 dark:from-white/40 to-transparent"></div>
-            </div>
+            
 
             <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -125,11 +103,7 @@ export const Home = () => {
               <Contact />
             </motion.div>
 
-            <div className="block md:hidden my-4 flex items-center gap-4">
-              <div className="flex-1 h-px bg-gradient-to-r from-transparent to-black/40 dark:to-white/40"></div>
-              <div className="w-2 h-2 rounded-full bg-blue-500/50"></div>
-              <div className="flex-1 h-px bg-gradient-to-r from-black/40 dark:from-white/40 to-transparent"></div>
-            </div>
+            
 
             <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -139,14 +113,9 @@ export const Home = () => {
             >
               <Testimonials />
             </motion.div>
-
-            <div className="block md:hidden my-4 flex items-center gap-4">
-              <div className="flex-1 h-px bg-gradient-to-r from-transparent to-black/40 dark:to-white/40"></div>
-              <div className="w-2 h-2 rounded-full bg-blue-500/50"></div>
-              <div className="flex-1 h-px bg-gradient-to-r from-black/40 dark:from-white/40 to-transparent"></div>
-            </div>
-            
           </div>
+
+          
           <Footer/>
         </main>
         

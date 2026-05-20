@@ -52,27 +52,26 @@ export const Header = () => {
       className={`fixed top-2 left-0 right-0 z-50 transition-transform duration-300
       ${hidden ? "-translate-y-full" : "translate-y-0"}`}
     >
-      <div className="max-w-8xl px-4 md:px-8">
+      <div className="max-w-8xl pt-3 md:pt-0  px-2 md:px-8">
 
         {/* NAVBAR */}
-        <nav className="relative overflow-hidden rounded-full border border border-white/20 dark:border-white/10  bg-white/70 dark:bg-black/70 backdrop-blur-2xl shadow-[0_8px_40px_rgba(0,0,0,0.35)]">
+        <nav className="relative overflow-hidden rounded-full border border border-white/20 dark:border-white/10  bg-white/70 dark:bg-black/70 backdrop-blur-3xl shadow-[0_8px_40px_rgba(0,0,0,0.35)]">
 
-          {/* Glow */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-400/5 to-purple-500/10" />
+          
 
-          <div className="relative flex items-center justify-between px-6 py-4">
+          <div className="relative flex items-center justify-between px-4 py-2">
 
             {/* LOGO */}
             <motion.a
               href="#hero"
               whileHover={{ scale: 1.05 }}
-              className="flex items-center gap-3 group"
+              className="flex items-center gap-1 group"
             >
               {/* AS Logo */}
-              <div className="relative flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-300 to-white ">
+              <div className="relative flex items-center justify-center w-15 h-15 rounded-2xl  ">
 
                 <span>
-                  <img src="./ASlogo.png" alt="AS" className="w-12 h-12" />
+                  <img src="./ASlogo3.png" alt="AS" className="w-19 h-19" />
                 </span>
 
                 

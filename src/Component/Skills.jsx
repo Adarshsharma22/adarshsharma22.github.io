@@ -60,7 +60,7 @@ export const Skills = () => {
       <div 
         id="skills" 
         onClick={() => setShowSkillsCard(true)}
-        className="group relative h-full overflow-hidden md:rounded-3xl md:border-2 border-white/10 bg-white/90 dark:bg-black p-3 backdrop-blur-xl transition-all duration-500 hover:border-blue-500/50 hover:shadow-[0_0_40px_8px_rgba(59,130,246,0.1)] cursor-pointer"
+        className="group relative h-full overflow-hidden md:rounded-3xl md:border border-border bg-white/90 dark:bg-black p-3 backdrop-blur-xl transition-all duration-500  hover:shadow-[0_0_40px_8px_rgba(59,130,246,0.1)] cursor-pointer"
       >
         
         <div className="relative z-10 flex h-full flex-col">

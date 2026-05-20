@@ -116,7 +116,7 @@ export function MyMusic() {
   };
 
   return (
-  <div id="music" className="relative h-full overflow-hidden rounded-3xl bg-linear-to-b from-purple-500 to-white dark:to-black/20 p-3 border border-white/20 hover:border-purple-700 ">
+  <div id="music" className="relative h-full overflow-hidden rounded-3xl bg-linear-to-b from-purple-500 to-white dark:to-black/20 p-3 border border-border ">
 
     <div className="flex flex-col h-full justify-between relative z-10">
       

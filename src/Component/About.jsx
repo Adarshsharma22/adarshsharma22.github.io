@@ -11,7 +11,7 @@ export const About = () => {
       <section 
         id="about"
         onClick={() => setShowCard(true)}
-        className="group relative h-full overflow-hidden md:rounded-3xl md:border-2 border-white/10 bg-white/90 dark:bg-black p-3 backdrop-blur-xl transition-all duration-500 hover:border-blue-500/50 hover:shadow-[0_0_40px_8px_rgba(59,130,246,0.1)] cursor-pointer"
+        className="group relative h-full m-2 md:m-0 overflow-hidden rounded-3xl border border-border bg-white/90 dark:bg-black p-10 md:p-3 backdrop-blur-xl transition-all duration-500  hover:shadow-[0_0_40px_8px_rgba(59,130,246,0.1)] cursor-pointer"
       >
     
          
@@ -29,7 +29,7 @@ export const About = () => {
 
           {/* Content */}
           <div className="mb-3">
-            <h2 className="mb-2 text-3xl font-black tracking-tight text-slate-900 dark:text-white">
+            <h2 className="mb-2 text-5xl md:text-3xl font-black tracking-tight text-slate-900 dark:text-white">
               About <span className="text-blue-500 text-shadow-glow">Me</span>
             </h2>
             <p className="text-lg leading-relaxed text-slate-800 dark:text-white/80">
