@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 
 export const Hero = () => {
   return (
-    <div id="hero" className="relative backdrop-blur-2xl h-full overflow-hidden md:border-2 bg-white/90 dark:bg-black  border-white/20 hover:border hover:border-blue-600/50 md:rounded-3xl  p-3 group ">
+    <div id="hero" className="relative backdrop-blur-2xl h-full overflow-hidden md:border bg-white/90 dark:bg-black  border-border hover:border  md:rounded-3xl  p-3 group ">
       <div className="relative flex flex-col justify-between">
         <div>
           <motion.div
@@ -18,15 +18,15 @@ export const Hero = () => {
           <span className="text-sm font-medium">Open to Opportunities</span>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row items-center ">
+        
   
   {/* Left - Text Content */}
-  <div className="flex-1">
+  <div className="flex-1 mb-3">
     <motion.h1
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="text-3xl md:text-4xl lg:text-7xl font-bold text-black dark:text-white mb-2"
+      className="text-5xl md:text-4xl lg:text-7xl font-bold text-black dark:text-white mb-2"
     >
       Adarsh <span className="bg-gradient-to-r from-red-500 to-blue-500 bg-clip-text text-transparent">Sharma</span>
     </motion.h1>
@@ -53,18 +53,9 @@ export const Hero = () => {
     </motion.div>
   </div>
 
-  {/* Right - Image (Centered) */}
-  <div className="flex justify-center md:justify-end ">
-    <img
-      src="./herobg.png"
-      alt="Adarsh Sharma"
-      className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-2xl"
-    />
-  </div>
-
-</div>
+  
           
-          <div className="flex gap-4">
+          <div className="flex gap-4 justify-center md:justify-start">
           <motion.a
             href="#projects"
             rel="noopener noreferrer"
@@ -95,10 +86,8 @@ export const Hero = () => {
           </motion.a>
           </div>
           
-          <div className="absolute -right-20 -bottom-30 h-100 w-100 rounded-full bg-blue-600/20 blur-[100px] transition-opacity group-hover:opacity-80" />
-          <div className="absolute -left-20 -top-30 h-100 w-100 rounded-full bg-blue-600/20 blur-[100px] transition-opacity group-hover:opacity-80" />
           {/* FireFlies */}
-          {[...Array(10)].map((_, i) => (
+          {/* {[...Array(10)].map((_, i) => (
             <span
               key={i}
               className={`
@@ -115,7 +104,7 @@ export const Hero = () => {
                 animationDelay: `${Math.random() * 3}s`,
               }}
             />
-          ))}
+          ))} */}
         </div>
       </div>
     </div>
