@@ -68,7 +68,7 @@ export const MyProject = () => {
             className="flex-1 min-w-[280px] group relative flex flex-col bg-white dark:bg-white/5 border border-black dark:border-white/10 rounded-2xl p-1 hover:shadow-lg hover:bg-slate-200 dark:hover:bg-white/10 transition-all duration-300"
           >
             {/* Visual Header */}
-            <div className="relative w-full h-40  rounded-xl bg-gradient-to-br  mb-4 flex items-center justify-center overflow-hidden">
+            <div className="relative w-full h-40  rounded-2xl bg-gradient-to-br  mb-4 flex items-center justify-center overflow-hidden">
               <img src={project.image} alt={project.title} />
               <div className="absolute inset-0 bg-black/5 dark:bg-black/20 group-hover:bg-transparent transition-colors" />
             </div>
