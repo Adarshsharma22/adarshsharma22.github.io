@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Header } from './Component/Header';
 import { Home } from './Pages/Home';
 import { FloatingDock } from './Pages/FlotingDock';
 
@@ -16,12 +17,19 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-background bg-white md:bg-black/20 dark:bg-zinc-950 text-foreground transition-colors duration-500">
+      <Header 
+        currentTheme={activeTheme}
+        onThemeToggle={() => 
+          setActiveTheme(activeTheme === 'light' ? 'dark' : 'light')
+        }
+      />
       <Home />
       <FloatingDock 
         currentTheme={activeTheme}
         onThemeToggle={() => 
           setActiveTheme(activeTheme === 'light' ? 'dark' : 'light')
         }
+        
       />
      
     </div>

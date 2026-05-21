@@ -3,11 +3,13 @@ import {
   Menu,
   X,
   Download,
+  Sun,
+  Moon,
 } from "lucide-react";
 
 import { motion, AnimatePresence } from "motion/react";
 
-export const Header = () => {
+export const Header = ({ onThemeToggle, currentTheme }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
 
@@ -46,6 +48,10 @@ export const Header = () => {
     { name: "Experience", href: "#experience" },
     { name: "Contact", href: "#contact" },
   ];
+
+  const handleThemeToggle = () => {
+    onThemeToggle();
+  };
 
   return (
     <header
@@ -124,13 +130,24 @@ export const Header = () => {
               
             </div>
             </div>
+            <div className="lg:hidden flex items-center gap-3">
+            <button
+              onClick={handleThemeToggle}
+              className="flex items-center justify-center w-11 h-11 rounded-xl bg-black/5 dark:bg-white/5 border border-black/20 dark:border-white/10 text-black dark:text-white hover:bg-white/10 transition-all"
+            >
+              {currentTheme === 'dark' ? (
+               <Sun className="w-5 h-5" />
+              ) : (
+               <Moon className="w-5 h-5" />
+              )}
+            </button>
 
             {/* RIGHT SIDE */}
             <button
                 onClick={() =>
                   setIsMobileMenuOpen(!isMobileMenuOpen)
                 }
-                className="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-black/5 dark:bg-white/5 border border-black/20 dark:border-white/10 text-black dark:text-white hover:bg-white/10 transition-all"
+                className="flex items-center justify-center w-11 h-11 rounded-xl bg-black/5 dark:bg-white/5 border border-black/20 dark:border-white/10 text-black dark:text-white hover:bg-white/10 transition-all"
               >
                 {isMobileMenuOpen ? (
                   <X size={22} />
@@ -138,6 +155,8 @@ export const Header = () => {
                   <Menu size={22} />
                 )}
               </button>
+            </div>
+            
           </div>
         </nav>
 

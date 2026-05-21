@@ -45,12 +45,14 @@ const timeline = [
 
 export const Experience = () => {
   return (
-    <div id="experience" className="relative h-full overflow-hidden md:rounded-4xl md:border border-border bg-purple-600/60 backdrop-blur-3xl p-4 shadow-2xl flex flex-col">
+    <div 
+    id="experience" 
+    className="relative h-full overflow-hidden rounded-4xl border border-border bg-blue-300 dark:bg-blue-400 backdrop-blur-3xl  m-2 md:m-0 shadow-2xl flex flex-col">
       
-      <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/10 blur-3xl rounded-full pointer-events-none" />
       
       
-      <div className="flex items-center justify-between mb-8 shrink-0 z-10">
+      
+      <div className="flex items-center justify-between p-8 pb-2 shrink-0 z-10">
         <div className="flex items-center gap-3 text-white">
           <div className="p-2 bg-white/20 rounded-lg">
             <Calendar className="w-6 h-6" />
@@ -97,7 +99,7 @@ export const Experience = () => {
               
               <div className="space-y-2">
                 <div className="flex items-center gap-3">
-                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded ${item.current ?  'bg-white text-purple-600' : 'bg-white/10 text-white/80'}`}>
+                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded ${item.current ?  'bg-white text-blue-600' : 'bg-white/10 text-white/80'}`}>
                     {item.year}
                   </span>
                   <h3 className="text-lg font-bold text-black dark:text-white group-hover:translate-x-1 transition-transform duration-300">
@@ -132,7 +134,6 @@ export const Experience = () => {
       </div>
 
       
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-purple-600 to-transparent pointer-events-none z-20" />
     </div>
   );
 };

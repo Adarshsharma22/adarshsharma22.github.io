@@ -67,7 +67,7 @@ export const FloatingDock = ({ onThemeToggle, currentTheme }) => {
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}
     >
-      <div className="flex items-center md:gap-2 gap-1 px-2 md:px-4 py-3 rounded-full bg-white/60 dark:bg-black/60 bg-background/60 backdrop-blur-sm border border border-slate-300 dark:border-slate-800 shadow-2xl">
+      <div className="hidden  md:flex items-center md:gap-2 gap-1 px-2 md:px-4 py-3 rounded-full bg-white/60 dark:bg-black/60 bg-background/60 backdrop-blur-sm border border border-slate-300 dark:border-slate-800 shadow-2xl">
         
         {dockItems.map((item, index) => (
           <motion.a
