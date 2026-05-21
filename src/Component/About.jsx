@@ -70,8 +70,8 @@ export const About = () => {
       {/* Modal for AboutCard */}
       {showCard && (
         <div 
-          className="fixed inset-0 z-60 flex items-center justify-center bg-black/20 backdrop-blur-sm p-4"
-          onClick={() => setShowCard(false)}           // Click outside to close
+          className="fixed inset-0 z-60 flex items-center justify-center bg-black/20 backdrop-blur-sm p-10"
+          onClick={() => setShowCard(false)}          
         >
           <div className="w-full max-w-7xl" onClick={(e) => e.stopPropagation()}>
             <AboutCard onClick={() => setShowCard(false)} />

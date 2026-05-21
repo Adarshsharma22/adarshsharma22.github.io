@@ -133,7 +133,7 @@ export const Header = ({ onThemeToggle, currentTheme }) => {
             <div className="lg:hidden flex items-center gap-3">
             <button
               onClick={handleThemeToggle}
-              className="flex items-center justify-center w-11 h-11 rounded-xl bg-black/5 dark:bg-white/5 border border-black/20 dark:border-white/10 text-black dark:text-white hover:bg-white/10 transition-all"
+              className="md:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-black/5 dark:bg-white/5 border border-black/20 dark:border-white/10 text-black dark:text-white hover:bg-white/10 transition-all"
             >
               {currentTheme === 'dark' ? (
                <Sun className="w-5 h-5" />
