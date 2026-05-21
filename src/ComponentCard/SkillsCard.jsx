@@ -44,14 +44,11 @@ export const SkillsCard = ({ onClose }) => {
       initial={{ opacity: 0, scale: 0.9, y: 20 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.9, y: 20 }}
-      className="relative group border border-black/5 dark:border-white/10 bg-white/60 dark:bg-black/90 backdrop-blur-2xl rounded-[2.5rem] cursor-pointer transition-all duration-500 hover:border-blue-500/50 hover:shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] w-full max-w-7xl mx-auto max-h-[92vh] overflow-y-auto no-scrollbar"
+      className="relative group border border-border  bg-white/60 dark:bg-black/80 backdrop-blur-sm rounded-[2.5rem] cursor-pointer transition-all duration-500  hover:shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] w-full max-w-7xl mx-auto max-h-[92vh] overflow-y-auto no-scrollbar"
       onClick={(e) => e.stopPropagation()}
     >
-      {/* Decorative Blue Glow Blobs */}
-      <div className="absolute -right-24 -top-24 h-[300px] w-[300px] md:h-[500px] md:w-[500px] rounded-full bg-blue-600/5 dark:bg-blue-600/10 blur-[80px] md:blur-[120px] group-hover:bg-blue-600/20 transition-all duration-700" />
-      <div className="absolute -left-24 -bottom-24 h-[200px] w-[200px] md:h-[400px] md:w-[400px] rounded-full bg-indigo-600/5 dark:bg-indigo-600/10 blur-[60px] md:blur-[100px] group-hover:bg-indigo-600/20 transition-all duration-700" />
-
-      <div className="relative z-10 p-6 md:p-10">
+      
+      <div className="relative z-10 p-6 md:p-6">
         {/* Header Section */}
         <div className="flex justify-between items-start mb-10">
           <div>
@@ -65,7 +62,7 @@ export const SkillsCard = ({ onClose }) => {
           </div>
           <button
             onClick={onClose}
-            className="absolute top-6 right-6 z-50 text-slate-400 dark:text-white/60 hover:text-white bg-black/40 dark:bg-white/10 hover:bg-black/60 p-2 rounded-full transition-all">
+            className="absolute top-6 right-6 z-50 text-black/60 dark:text-white/60 hover:text-white hover:bg-black/60 dark:hover:bg-white/20 p-2 rounded-full transition-all">
             <X size={24} />
           </button>
         </div>
@@ -95,7 +92,7 @@ export const SkillsCard = ({ onClose }) => {
         </div>
 
         {/* Skills Grid/List Area */}
-        <div className="max-h-[50vh] overflow-y-auto pr-4 custom-scrollbar grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="h-60 overflow-y-auto pr-4 custom-scrollbar grid grid-cols-1 md:grid-cols-2 gap-2 ">
           <AnimatePresence mode="wait">
             {skills[activeTab].map((skill, index) => {
               const Icon = skill.icon;
@@ -106,9 +103,9 @@ export const SkillsCard = ({ onClose }) => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 10 }}
                   transition={{ delay: index * 0.05 }}
-                  className="group relative p-5 rounded-3xl border border-slate-200 dark:border-white/5 bg-white/50 dark:bg-white/5 hover:border-blue-500/50 hover:bg-blue-500/[0.02] transition-all duration-300"
+                  className="group relative p-3 h-20  rounded-3xl border border-slate-200 dark:border-white/5 bg-white/50 dark:bg-white/5 hover:border-blue-500/50 hover:bg-blue-500/2 transition-all duration-300"
                 >
-                  <div className="flex items-center gap-4 mb-4">
+                  <div className="flex items-center gap-3">
                     <div className="p-3 rounded-2xl bg-white dark:bg-black border border-slate-100 dark:border-white/10 shadow-sm group-hover:shadow-blue-500/20 group-hover:scale-110 transition-transform duration-300">
                       <Icon className={`text-2xl ${skill.color}`} />
                     </div>

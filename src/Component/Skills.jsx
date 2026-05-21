@@ -13,43 +13,43 @@ export const Skills = () => {
     {
       title: "Frontend",
       skills: [
-        { name: "HTML5",icon: FaHtml5, color: "bg-blue-400/20", border:"border border-blue-500" },
-        { name: "CSS3",icon: FaCss3Alt, color: "bg-blue-400/20", border:"border border-blue-500" },
-        { name: "Tailwind",icon: SiTailwindcss, color: "bg-blue-400/20", border:"border border-blue-500" },
-        { name: "React",icon: FaReact, color: "bg-blue-400/20", border:"border border-blue-500" },
-        { name: "JavaScript",icon: SiJavascript, color: "bg-blue-400/20", border:"border border-blue-500" },
-        { name: "TypeScript",icon: SiTypescript, color: "bg-blue-400/20", border:"border border-blue-500" },
+        { name: "HTML5",icon: FaHtml5, color: "text-orange-500", border:"border border-slate-300 dark:border-slate-600" },
+        { name: "CSS3",icon: FaCss3Alt, color: "text-blue-500", border:"border border-slate-300 dark:border-slate-600" },
+        { name: "Tailwind",icon: SiTailwindcss, color: "text-sky-400", border:"border border-slate-300 dark:border-slate-600" },
+        { name: "React",icon: FaReact, color: "text-cyan-400", border:"border border-slate-300 dark:border-slate-600" },
+        { name: "JavaScript",icon: SiJavascript, color: "text-yellow-400", border:"border border-slate-300 dark:border-slate-600" },
+        { name: "TypeScript",icon: SiTypescript, color: "text-blue-400", border:"border border-slate-300 dark:border-slate-600" },
       ]
     },
     {
       title: "Backend",
       skills: [
-        { name: "Node.js",icon: FaNodeJs, color: "bg-red-400/20", border:"border border-red-500" },
-        { name: "Express",icon: SiExpress, color: "bg-red-400/20", border:"border border-red-500" },
-        { name: "REST APIs",icon: Settings, color: "bg-red-400/20", border:"border border-red-500" },
+        { name: "Node.js",icon: FaNodeJs, color: "text-green-500", border:"border border-slate-300 dark:border-slate-600" },
+        { name: "Express",icon: SiExpress, color: "text-slate-600 dark:text-slate-300", border:"border border-slate-300 dark:border-slate-600" },
+        { name: "REST APIs",icon: Settings, color: "text-blue-700", border:"border border-slate-300 dark:border-slate-600" },
       ]
     },
     {
       title: "Database",
       skills: [
-        { name: "MongoDB",icon: SiMongodb, color: "bg-green-400/20", border:"border border-green-500" },
-        { name: "MySQL",icon: SiMysql, color: "bg-green-400/20", border:"border border-green-500" },
+        { name: "MongoDB",icon: SiMongodb, color: "text-green-400", border:"border border-slate-300 dark:border-slate-600" },
+        { name: "MySQL",icon: SiMysql, color: "text-blue-500", border:"border border-slate-300 dark:border-slate-600" },
       ]
     },
     {
       title: "Tools",
       skills: [
-        { name: "GitHub",icon: FaGithub, color: "bg-yellow-400/20", border:"border border-yellow-500" },
-        { name: "AWS",icon: FaAws, color: "bg-yellow-400/20", border:"border border-yellow-500" },
-        { name: "Postman",icon: SiPostman, color: "bg-yellow-400/20", border:"border border-yellow-500" },
-        { name: "VS Code",icon: VscVscode, color: "bg-yellow-400/20", border:"border border-yellow-500" },
+        { name: "GitHub",icon: FaGithub, color: "text-black dark:text-white", border:"border border-slate-300 dark:border-slate-600" },
+        { name: "AWS",icon: FaAws, color: "text-yellow-500", border:"border border-slate-300 dark:border-slate-600" },
+        { name: "Postman",icon: SiPostman, color: "text-orange-400", border:"border border-slate-300 dark:border-slate-600" },
+        { name: "VS Code",icon: VscVscode, color: "text-blue-400", border:"border border-slate-300 dark:border-slate-600" },
       ]
     },
     {
       title: "AI Tools",
       skills: [
-        { name: "Claude",icon: SiClaude, color: "bg-black/20", border:"border border-white" },
-        { name: "OpenAI",icon: SiOpenai, color: "bg-black/20", border:"border border-white"  },
+        { name: "Claude",icon: SiClaude, color: "text-orange-400", border:"border border-slate-300 dark:border-slate-600" },
+        { name: "OpenAI",icon: SiOpenai, color: "text-emerald-400", border:"border border-slate-300 dark:border-slate-600" },
       ]
     },
   ];
@@ -89,8 +89,8 @@ export const Skills = () => {
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.02 * i }}
                       whileHover={{ scale: 1.1, y: -1 }}
-                      className={`px-3 py-1.5 text-xs font-medium rounded-2xl bg-gradient-to-r ${skill.color} backdrop-blur-xl  ${skill.border}
-                        text-black dark:text-white shadow-sm cursor-default`}
+                      className={`px-3 py-1.5 text-xs font-medium rounded-2xl ${skill.color} backdrop-blur-xl  ${skill.border}
+                         shadow-sm cursor-default`}
                     >
                       <skill.icon className="inline-block w-3.5 h-3.5 mr-1" />
                       {skill.name}
@@ -106,7 +106,7 @@ export const Skills = () => {
       {/* Modal - SkillsCard */}
       {showSkillsCard && (
         <div 
-          className="fixed inset-0 z-60 flex items-center justify-center bg-black/90 backdrop-blur-md p-4"
+          className="fixed inset-0 z-60 flex items-center justify-center bg-black/20 backdrop-blur-sm p-4"
           onClick={() => setShowSkillsCard(false)}   // Click outside to close
         >
           <div className="w-full max-w-2xl" onClick={(e) => e.stopPropagation()}>

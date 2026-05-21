@@ -26,13 +26,13 @@ export const AboutCard = ({ onClick }) => {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.9 }}
       onClick={onClick}
-      className="relative group border border-border  bg-white/60 dark:bg-black/20 backdrop-blur-none rounded-[2.5rem] cursor-pointer transition-all duration-500 hover:shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] w-full max-w-7xl mx-auto max-h-[92vh] overflow-y-auto no-scrollbar"
+      className="relative group border border-border  bg-white/60 dark:bg-black/80 backdrop-blur-none rounded-[2.5rem] cursor-pointer transition-all duration-500 hover:shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] w-full max-w-7xl mx-auto max-h-[92vh] overflow-y-auto no-scrollbar"
     >
       {/* Close Button */}
       <button
         onClick={(e) => { e.stopPropagation(); onClick(); }}
-        className="absolute top-6 right-6 z-50 text-slate-400 dark:text-white/60 hover:text-white bg-black/40 dark:bg-white/10 hover:bg-black/60 p-2 rounded-full transition-all"
-      >
+            className="absolute top-6 right-6 z-50 text-black/60 dark:text-white/60 hover:text-white hover:bg-black/60 dark:hover:bg-white/20 p-2 rounded-full transition-all">
+      
         <X size={28} strokeWidth={2.5} />
       </button>
 

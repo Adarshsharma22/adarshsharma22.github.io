@@ -55,7 +55,7 @@ export const Header = () => {
       <div className="max-w-8xl pt-3 md:pt-0  px-2 md:px-8">
 
         {/* NAVBAR */}
-        <nav className="relative overflow-hidden rounded-full border border border-white/20 dark:border-white/10  bg-white/70 dark:bg-black/70 backdrop-blur-3xl shadow-[0_8px_40px_rgba(0,0,0,0.35)]">
+        <nav className="relative overflow-hidden rounded-full border  border-white/70 dark:border-slate-800  bg-white/70 dark:bg-black/70 backdrop-blur-sm shadow-[0_8px_40px_rgba(0,0,0,0.35)] dark:shadow-[0_8px_40px_rgba(255,255,255,0.1)]">
 
           
 
