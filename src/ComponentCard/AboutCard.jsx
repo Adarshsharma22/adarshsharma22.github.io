@@ -26,7 +26,7 @@ export const AboutCard = ({ onClick }) => {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.9 }}
       onClick={onClick}
-      className="relative group border border-black/5 dark:border-white/10 bg-white/60 dark:bg-black/90 backdrop-blur-2xl rounded-[2.5rem] cursor-pointer transition-all duration-500 hover:border-blue-500/50 hover:shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] w-full max-w-7xl mx-auto max-h-[92vh] overflow-y-auto no-scrollbar"
+      className="relative group border border-border  bg-white/60 dark:bg-black/20 backdrop-blur-none rounded-[2.5rem] cursor-pointer transition-all duration-500 hover:shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] w-full max-w-7xl mx-auto max-h-[92vh] overflow-y-auto no-scrollbar"
     >
       {/* Close Button */}
       <button
@@ -36,10 +36,7 @@ export const AboutCard = ({ onClick }) => {
         <X size={28} strokeWidth={2.5} />
       </button>
 
-      {/* Background Glows */}
-      <div className="absolute -right-24 -top-24 h-[300px] w-[300px] md:h-[500px] md:w-[500px] rounded-full bg-blue-600/5 dark:bg-blue-600/10 blur-[80px] md:blur-[120px] group-hover:bg-blue-600/20 transition-all duration-700" />
-      <div className="absolute -left-24 -bottom-24 h-[200px] w-[200px] md:h-[400px] md:w-[400px] rounded-full bg-indigo-600/5 dark:bg-indigo-600/10 blur-[60px] md:blur-[100px] group-hover:bg-indigo-600/20 transition-all duration-700" />
-
+      
       <div 
         className="relative z-10 flex flex-col lg:flex-row gap-8 md:gap-12 pb-20 p-6 md:p-12 min-h-auto lg:min-h-[600px] items-center justify-center"
         onClick={(e) => e.stopPropagation()}
@@ -106,7 +103,7 @@ export const AboutCard = ({ onClick }) => {
         {/* Right Section: Visuals */}
         <div className="flex flex-col items-center gap-6 md:gap-8 shrink-0 w-full lg:w-auto">
           <div className="relative group/photo">
-            <div className="absolute -inset-4 rounded-[3rem] border-2 border-dashed border-blue-600/70 dark:border-blue-500/20 animate-[spin_20s_linear_infinite] group-hover/photo:border-blue-700 dark:group-hover/photo:border-blue-500/50 transition-colors hidden md:block" />
+            <div className="absolute -inset-4 rounded-[3rem] border-2 border-dashed border-blue-600/50  animate-[spin_20s_linear_infinite] group-hover/photo:border-blue-700 transition-colors hidden md:block" />
             
             <div className="relative h-48 w-48 sm:h-64 sm:w-64 md:h-72 md:w-72">
               <img

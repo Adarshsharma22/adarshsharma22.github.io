@@ -118,6 +118,25 @@ export const Home = () => {
           
           <Footer/>
         </main>
+         {/* FireFlies */}
+          {[...Array(30)].map((_, i) => (
+            <span
+              key={i}
+              className={`
+                absolute rounded-full bg-cyan-400 z-0
+                shadow-[0_0_10px_#22d3ee,0_0_20px_#22d3ee,0_0_40px_#22d3ee]
+                animate-firefly
+              `}
+              style={{
+                width: `${Math.random() * 6 + 4}px`,
+                height: `${Math.random() * 6 + 4}px`,
+                top: `${Math.random() * 300}%`,
+                left: `${Math.random() * 90}%`,
+                animationDuration: `${Math.random() * 5 + 5}s`,
+                animationDelay: `${Math.random() * 3}s`,
+              }}
+            />
+          ))}
         
       </div>
     </div>
