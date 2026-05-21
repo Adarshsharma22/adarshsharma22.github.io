@@ -46,7 +46,7 @@ export const Hero = () => {
       Full Stack Developer & AI Integrator
     </motion.div>
     <div className="flex gap-4 ">
-      <div className="md:h-23 w-4 md:w-1 m-2 rounded-4xl bg-blue-400"></div>
+      <div className="md:h-23 w-2 md:w-1 m-2 rounded-4xl bg-blue-400"></div>
       <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export const Hero = () => {
             transition={{ delay: 0.5 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group/btn flex cursor-pointer w-35 items-center md:w-44 gap-1 px-3 md:px-6 py-3 md:py-3 border border-blue-600/20 hover:border-blue-600 bg-blue-600/10 backdrop-blur-xl text-blue-700 rounded-full font-medium hover:shadow-2xl transition-shadow"
+            className="group/btn flex cursor-pointer w-40 items-center md:w-44 gap-4 md:gap-1 px-3 md:px-6 py-3 md:py-3 border border-blue-600/20 hover:border-blue-600 bg-blue-600/10 backdrop-blur-xl text-blue-700 rounded-full font-medium hover:shadow-2xl transition-shadow"
           >
             View my work
             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -87,7 +87,7 @@ export const Hero = () => {
             transition={{ delay: 0.5 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group/btn flex cursor-pointer w-35 items-center md:w-44 gap-1 px-3 md:px-6 py-3 md:py-3 border border-blue-600 bg-white/90 hover:bg-blue-700 backdrop-blur-xl text-blue-700 hover:text-white rounded-full font-medium hover:shadow-2xl transition-shadow"
+            className="group/btn flex cursor-pointer w-40 items-center md:w-44 gap-4 md:gap-1 px-3 md:px-6 py-3 md:py-3 border border-blue-600 bg-white/90 hover:bg-blue-700 backdrop-blur-xl text-blue-700 hover:text-white rounded-full font-medium hover:shadow-2xl transition-shadow"
           >
             Download CV
             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />

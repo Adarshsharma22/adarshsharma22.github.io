@@ -36,13 +36,16 @@ export const MyProject = () => {
 
   return (
     <>
-    <div id="projects" onClick={() => setShowProjectCard(true)} className="h-full w-full md:rounded-3xl bg-white/80 dark:bg-black   backdrop-blur-md md:border-2 border-white/10 hover:border-blue-500/50 p-3 pr-1 md:pr-3 flex flex-col transition-colors duration-500">
+    <div 
+    id="projects" 
+    onClick={() => setShowProjectCard(true)} 
+    className="group relative h-full m-2 md:m-0 overflow-hidden rounded-3xl border border-border bg-white/90 dark:bg-black p-2  md:p-3 pb-10 md:pb-0 backdrop-blur-xl transition-all duration-500  hover:shadow-[0_0_40px_8px_rgba(59,130,246,0.1)] cursor-pointer">
       
       {/* Header */}
       <div className="relative z-10 flex h-full flex-col">
-        <div className='mb-5 flex items-center justify-between'>
+        <div className='mb-5 flex items-center justify-between p-7 md:p-3 pb-2 md:pb-0'>
         <div>
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white/90">My Projects & Featured Work</h2>
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white/90">My Projects</h2>
           <div className="flex items-center gap-2 mt-1">
             <span className="h-1.5 w-1.5 rounded-full bg-blue-500 animate-pulse" />
             <p className="text-[10px] text-slate-500 dark:text-white/40 uppercase tracking-widest">
@@ -62,16 +65,16 @@ export const MyProject = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="flex-1 min-w-[280px] group relative flex flex-col bg-white dark:bg-white/5 border border-black dark:border-white/10 rounded-2xl p-4 hover:shadow-lg hover:bg-slate-200 dark:hover:bg-white/10 transition-all duration-300"
+            className="flex-1 min-w-[280px] group relative flex flex-col bg-white dark:bg-white/5 border border-black dark:border-white/10 rounded-2xl p-1 hover:shadow-lg hover:bg-slate-200 dark:hover:bg-white/10 transition-all duration-300"
           >
             {/* Visual Header */}
-            <div className="relative w-full h-32 rounded-xl bg-gradient-to-br  mb-4 flex items-center justify-center overflow-hidden">
+            <div className="relative w-full h-40  rounded-xl bg-gradient-to-br  mb-4 flex items-center justify-center overflow-hidden">
               <img src={project.image} alt={project.title} />
               <div className="absolute inset-0 bg-black/5 dark:bg-black/20 group-hover:bg-transparent transition-colors" />
             </div>
 
             {/* Project Details */}
-            <div className="flex flex-col  flex-grow">
+            <div className="flex flex-col  flex-grow p-3">
               <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{project.title}</h3>
               <p className="text-xs text-slate-600 dark:text-white/60 line-clamp-3 mb-4 leading-relaxed">
                 {project.description}

@@ -45,13 +45,10 @@ export const ProjectCard = ({ onClose }) => {
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.9 }}
-      className="relative w-full max-w-6xl h-[85vh] overflow-hidden rounded-[2.5rem] border border-black/5 dark:border-white/10 bg-white/60 dark:bg-black/90 backdrop-blur-2xl  duration-500 hover:border-blue-500/50  hover:shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] flex flex-col"
+      className="relative w-full max-w-6xl h-[85vh] overflow-hidden rounded-[2.5rem] border border-border bg-white/60 dark:bg-black/90 backdrop-blur-2xl  duration-500 hover:shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] flex flex-col"
       onClick={(e) => e.stopPropagation()}
     >
-      {/* Dynamic Background Glow */}
-      <div className="absolute -right-24 -top-24 h-[300px] w-[300px] md:h-[500px] md:w-[500px] rounded-full bg-blue-600/5 dark:bg-blue-600/10 blur-[80px] md:blur-[120px] group-hover:bg-blue-600/20 transition-all duration-700" />
-      <div className="absolute -left-24 -bottom-24 h-[200px] w-[200px] md:h-[400px] md:w-[400px] rounded-full bg-indigo-600/5 dark:bg-indigo-600/10 blur-[60px] md:blur-[100px] group-hover:bg-indigo-600/20 transition-all duration-700" />
-
+      
       {/* Header */}
       <div className="flex justify-between items-center p-8 pb-4 z-20">
         <div>
@@ -67,7 +64,7 @@ export const ProjectCard = ({ onClose }) => {
       </div>
 
       {/* Main Grid Section */}
-      <div className="flex-1 overflow-y-auto p-8 pt-4 custom-scrollbar z-10">
+      <div className="flex-1 overflow-y-auto p-2 pt-4 custom-scrollbar z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
@@ -76,8 +73,7 @@ export const ProjectCard = ({ onClose }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              onClick={() => setSelectedProject(project)}
-              className="group relative flex flex-col bg-white/30 dark:bg-black/20 border border-white/10 rounded-3xl overflow-hidden hover:border-blue-500/50 transition-colors cursor-pointer"
+              className="group relative flex flex-col bg-white/30 dark:bg-black/20 border border-white/10 rounded-3xl overflow-hidden hover:border-slate-400 transition-colors cursor-pointer"
             >
               {/* Card Image/Visual */}
               <div className={`h-48 bg-gradient-to-br relative overflow-hidden`}>
@@ -86,8 +82,8 @@ export const ProjectCard = ({ onClose }) => {
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col flex-1 bg-white/50 dark:bg-black/30">
-                <h3 className="text-xl font-bold text-black dark:text-white mb-2 group-hover:text-blue-400 transition-colors">
+              <div className="p-3 flex flex-col flex-1 bg-white/50 dark:bg-black/30">
+                <h3 className="text-xl font-bold text-black dark:text-white mb-2  transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-neutral-600 dark:text-neutral-400 text-sm line-clamp-2 mb-6">
@@ -96,12 +92,18 @@ export const ProjectCard = ({ onClose }) => {
                 
                 
                 <div className="mt-auto flex items-center justify-between">
-                  <span className="text-xs font-bold text-black/40 group-hover:text-black dark:text-white/40 dark:group-hover:text-white flex items-center gap-1 transition-colors">
-                    VIEW DETAILS <ChevronRight size={14} />
+                  <span 
+                  className="text-6px font-bold text-black/40 group-hover:text-blue-400 dark:text-white/40 flex items-center gap-1 transition-colors"
+                  onClick={() => setSelectedProject(project)}>
+                    VIEW DETAILS <ChevronRight size={25} />
                   </span>
                   <div className="flex gap-3">
-                    <FaGithub size={18} className="text-neutral-600 hover:text-white" />
-                    <ExternalLink size={18} className="text-neutral-600 hover:text-white" />
+                    <a href={project.github} target="_blank" rel="noreferrer">
+                      <FaGithub size={30} className="text-neutral-600 hover:text-white" />
+                    </a>
+                    <a href={project.live} target="_blank" rel="noreferrer">
+                      <ExternalLink size={30} className="text-neutral-600 hover:text-white" />
+                    </a>
                   </div>
                 </div>
               </div>
