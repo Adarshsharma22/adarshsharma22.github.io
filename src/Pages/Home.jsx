@@ -35,7 +35,7 @@ export const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="hidden md:block md:col-span-2 lg:col-span-2 md:row-span-1 hover:scale-102 transition-transform duration-500"
+              className=" md:col-span-2 lg:col-span-2 md:row-span-1 hover:scale-102 transition-transform duration-500"
             >
               <Stats />
             </motion.div>

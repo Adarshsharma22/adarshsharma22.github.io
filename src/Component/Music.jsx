@@ -3,30 +3,15 @@ import { motion } from "motion/react";
 import { Music, Pause, Play, Volume2, SkipBack, SkipForward } from "lucide-react";
 
 const playlist = [
+  
   {
     id: 1,
-    title: "Lofi Hip Hop",
-    artist: "Study Beats",
-    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-  },
-  {
-    id: 2,
-    title: "Chill Vibes",
+    title: "Next To You",
     artist: "Relaxing Music",
-    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+    url: "/Next To You.mp3",
   },
-  {
-    id: 3,
-    title: "Midnight Drive",
-    artist: "Synthwave",
-    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
-  },
-  {
-    id: 4,
-    title: "Summer Rain",
-    artist: "Lofi Beats",
-    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
-  },
+  
+  
 ];
 
 export function MyMusic() {

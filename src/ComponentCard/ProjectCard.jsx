@@ -135,18 +135,18 @@ export const ProjectCard = ({ onClose }) => {
                 </button>
               </div>
 
-              <div className="p-8 md:p-12">
-                <div className="flex flex-wrap gap-2 mb-6">
+              <div className="p-2 md:p-12">
+                <div className="flex flex-wrap gap-2 mb-3">
                   {selectedProject.tags.map(tag => (
                     <span key={tag} className="px-4 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-xs font-bold">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <h2 className="text-4xl md:text-5xl font-black text-black dark:text-white mb-6">{selectedProject.title}</h2>
-                <p className="text-xl text-neutral-500 dark:text-neutral-300 leading-relaxed mb-8">{selectedProject.longDesc}</p>
+                <h2 className="text-3xl md:text-5xl font-black text-black dark:text-white mb-3">{selectedProject.title}</h2>
+                <p className=" text-neutral-500 dark:text-neutral-300 leading-relaxed mb-6">{selectedProject.longDesc}</p>
                 
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-4 mb-4">
                   <a href={selectedProject.live} className="flex-1 flex items-center justify-center gap-2 bg-white text-black font-bold py-4 rounded-2xl hover:bg-neutral-200 transition-colors">
                     Live Demo <ExternalLink size={20} />
                   </a>

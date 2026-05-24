@@ -5,6 +5,12 @@ import {
   Download,
   Sun,
   Moon,
+  Home,
+  User,
+  FolderKanban,
+  Briefcase,
+  Code2,
+  Mail,
 } from "lucide-react";
 
 import { motion, AnimatePresence } from "motion/react";
@@ -41,12 +47,12 @@ export const Header = ({ onThemeToggle, currentTheme }) => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
-    { name: "Experience", href: "#experience" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "#hero", icon: Home },
+    { name: "About", href: "#about", icon: User },
+    { name: "Projects", href: "#projects", icon: FolderKanban },
+    { name: "Skills", href: "#skills", icon: Code2 },
+    { name: "Experience", href: "#experience", icon: Briefcase },
+    { name: "Contact", href: "#contact", icon: Mail },
   ];
 
   const handleThemeToggle = () => {
@@ -59,14 +65,9 @@ export const Header = ({ onThemeToggle, currentTheme }) => {
       ${hidden ? "-translate-y-full" : "translate-y-0"}`}
     >
       <div className="max-w-8xl pt-3 md:pt-0  px-2 md:px-8">
-
         {/* NAVBAR */}
         <nav className="relative overflow-hidden rounded-full border  border-white/70 dark:border-slate-800  bg-white/70 dark:bg-black/70 backdrop-blur-sm shadow-[0_8px_40px_rgba(0,0,0,0.35)] dark:shadow-[0_8px_40px_rgba(255,255,255,0.1)]">
-
-          
-
           <div className="relative flex items-center justify-between px-4 py-2">
-
             {/* LOGO */}
             <motion.a
               href="#hero"
@@ -75,12 +76,9 @@ export const Header = ({ onThemeToggle, currentTheme }) => {
             >
               {/* AS Logo */}
               <div className="relative flex items-center justify-center w-15 h-15 rounded-2xl  ">
-
                 <span>
                   <img src="./ASlogo3.png" alt="AS" className="w-19 h-19" />
                 </span>
-
-                
               </div>
 
               {/* Name */}
@@ -97,66 +95,54 @@ export const Header = ({ onThemeToggle, currentTheme }) => {
 
             {/* DESKTOP NAV */}
             <div className="hidden lg:flex items-center gap-1">
-
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   className="relative px-3 py-2 rounded-full text-sm font-medium text-black/70 dark:text-white/70 transition-all duration-300 hover:text-black dark:hover:text-white hover:bg-white/10 group overflow-hidden"
                 >
-                  <span className="relative z-10">
-                    {link.name}
-                  </span>
+                  <span>{link.name}</span>
 
                   {/* Hover Glow */}
                   <div className="absolute inset-0 scale-0 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-400/20 transition-transform duration-300 group-hover:scale-100" />
                 </a>
               ))}
               <div className="flex items-center gap-3">
+                {/* CV BUTTON */}
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.96 }}
+                  href="/Adarsh_Sharma_CV.pdf"
+                  download
+                  className="hidden md:flex items-center gap-2 rounded-full  bg-blue-600  px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:shadow-cyan-500/40"
+                >
+                  <Download size={16} />
+                  Download CV
+                </motion.a>
 
-              {/* CV BUTTON */}
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.96 }}
-                href="/resume.pdf"
-                download
-                className="hidden md:flex items-center gap-2 rounded-full  bg-blue-600  px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:shadow-cyan-500/40"
-              >
-                <Download size={16} />
-                Download CV
-              </motion.a>
-
-              {/* MOBILE MENU BUTTON */}
-              
-            </div>
+                {/* MOBILE MENU BUTTON */}
+              </div>
             </div>
             <div className="lg:hidden flex items-center gap-3">
-            <button
-              onClick={handleThemeToggle}
-              className="md:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-black/5 dark:bg-white/5 border border-black/20 dark:border-white/10 text-black dark:text-white hover:bg-white/10 transition-all"
-            >
-              {currentTheme === 'dark' ? (
-               <Sun className="w-5 h-5" />
-              ) : (
-               <Moon className="w-5 h-5" />
-              )}
-            </button>
-
-            {/* RIGHT SIDE */}
-            <button
-                onClick={() =>
-                  setIsMobileMenuOpen(!isMobileMenuOpen)
-                }
-                className="flex items-center justify-center w-11 h-11 rounded-xl bg-black/5 dark:bg-white/5 border border-black/20 dark:border-white/10 text-black dark:text-white hover:bg-white/10 transition-all"
+              <button
+                onClick={handleThemeToggle}
+                className="md:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-black/5 dark:bg-white/5 border border-black/20 dark:border-white/10 text-black dark:text-white hover:bg-white/10 transition-all"
               >
-                {isMobileMenuOpen ? (
-                  <X size={22} />
+                {currentTheme === "dark" ? (
+                  <Sun className="w-5 h-5" />
                 ) : (
-                  <Menu size={22} />
+                  <Moon className="w-5 h-5" />
                 )}
               </button>
+
+              {/* RIGHT SIDE */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="flex items-center justify-center w-11 h-11 rounded-xl bg-black/5 dark:bg-white/5 border border-black/20 dark:border-white/10 text-black dark:text-white hover:bg-white/10 transition-all"
+              >
+                {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+              </button>
             </div>
-            
           </div>
         </nav>
 
@@ -168,10 +154,9 @@ export const Header = ({ onThemeToggle, currentTheme }) => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.95 }}
               transition={{ duration: 0.25 }}
-              className="lg:hidden mt-4 overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white/50 dark:bg-black/50 backdrop-blur-2xl"
+              className="lg:hidden mt-4 ml-45 md:ml-150 overflow-hidden  rounded-3xl border border-black/10 dark:border-white/10 bg-white/50 dark:bg-black/50 backdrop-blur-2xl"
             >
-              <div className="flex flex-col p-4">
-
+              <div className="flex flex-col  p-4">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
@@ -179,7 +164,11 @@ export const Header = ({ onThemeToggle, currentTheme }) => {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="rounded-2xl px-4 py-4 text-black/80 dark:text-white/80 font-medium transition-all duration-300 hover:bg-black/10 dark:hover:bg-white/10 hover:text-black dark:hover:text-white"
                   >
-                    {link.name}
+                    <span className="relative flex items-center gap-0 z-10">
+                      {link.icon && <link.icon className="w-5 h-5" />}
+                      <span className="ml-2"></span>
+                      {link.name}
+                    </span>
                   </a>
                 ))}
 
@@ -190,7 +179,7 @@ export const Header = ({ onThemeToggle, currentTheme }) => {
                   className="mt-3 flex items-center justify-center gap-2 rounded-2xl  bg-blue-600  px-4 py-4 font-semibold text-white"
                 >
                   <Download size={18} />
-                  Download CV
+                  CV
                 </a>
               </div>
             </motion.div>

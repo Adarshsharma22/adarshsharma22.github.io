@@ -70,7 +70,7 @@ export const About = () => {
       {/* Modal for AboutCard */}
       {showCard && (
         <div 
-          className="fixed inset-0 z-60 flex items-center justify-center bg-black/20 backdrop-blur-sm p-10"
+          className="fixed inset-0 z-60 flex items-center justify-center bg-black/20 backdrop-blur-sm p-2 md:p-15  "
           onClick={() => setShowCard(false)}          
         >
           <div className="w-full max-w-7xl" onClick={(e) => e.stopPropagation()}>

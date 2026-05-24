@@ -46,7 +46,7 @@ export const AboutCard = ({ onClick }) => {
         <div className="flex-1 text-left w-full">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4 md:mb-6">
             <Sparkles className="h-3.5 w-3.5 text-blue-500 dark:text-blue-400" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">Professional Profile</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">About Me</span>
           </div>
 
           <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-slate-900 dark:text-white mb-2">
@@ -61,13 +61,13 @@ export const AboutCard = ({ onClick }) => {
           </p>
 
           {/* Quick Stats Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-8 md:mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 mb-8 md:mb-10">
             {[
               { icon: MapPin, text: "Mumbai, Maharashtra" },
               { icon: Briefcase, text: "Full Stack Developer (Fresher)" },
               { icon: GraduationCap, text: "BSc IT • D.G. Ruparel", sub: "2023–2026" },
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 p-3 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/5">
+              <div key={i} className="flex items-center gap-3 p-2 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/5">
                 <div className="h-9 w-9 md:h-10 md:w-10 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0">
                   <item.icon className="h-4 w-4 md:h-5 md:w-5 text-blue-600 dark:text-blue-400" />
                 </div>
@@ -103,7 +103,7 @@ export const AboutCard = ({ onClick }) => {
         {/* Right Section: Visuals */}
         <div className="flex flex-col items-center gap-6 md:gap-8 shrink-0 w-full lg:w-auto">
           <div className="relative group/photo">
-            <div className="absolute -inset-4 rounded-[3rem] border-2 border-dashed border-blue-600/50  animate-[spin_20s_linear_infinite] group-hover/photo:border-blue-700 transition-colors hidden md:block" />
+            <div className="absolute -inset-4 rounded-[3rem] border-2 border-dashed border-blue-600/50  animate-[spin_20s_linear_infinite] group-hover/photo:border-blue-700 transition-colors" />
             
             <div className="relative h-48 w-48 sm:h-64 sm:w-64 md:h-72 md:w-72">
               <img
