@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowUpRight, BrainCircuit,Settings } from 'lucide-react';
 import { SkillsCard } from '../ComponentCard/SkillsCard';   
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGithub, FaAws, } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGithub,  } from "react-icons/fa";
 import { SiJavascript, SiTypescript, SiTailwindcss, SiExpress, SiMongodb, SiMysql, SiPostman, SiOpenai, SiClaude, } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
@@ -40,7 +40,6 @@ export const Skills = () => {
       title: "Tools",
       skills: [
         { name: "GitHub",icon: FaGithub, color: "text-black dark:text-white", border:"border border-slate-300 dark:border-slate-600" },
-        { name: "AWS",icon: FaAws, color: "text-yellow-500", border:"border border-slate-300 dark:border-slate-600" },
         { name: "Postman",icon: SiPostman, color: "text-orange-400", border:"border border-slate-300 dark:border-slate-600" },
         { name: "VS Code",icon: VscVscode, color: "text-blue-400", border:"border border-slate-300 dark:border-slate-600" },
       ]

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MapPin, Briefcase, GraduationCap, Sparkles, Download, X } from 'lucide-react';
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaAws } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs,  } from "react-icons/fa";
 import { SiJavascript, SiTypescript, SiTailwindcss, SiExpress, SiMongodb } from "react-icons/si";
 
 export const AboutCard = ({ onClick }) => {
@@ -14,7 +14,6 @@ export const AboutCard = ({ onClick }) => {
     { name: "Node.js", icon: FaNodeJs },
     { name: "Express", icon: SiExpress },
     { name: "MongoDB", icon: SiMongodb },
-    { name: "AWS", icon: FaAws },
     { name: "HTML", icon: FaHtml5 },
     { name: "CSS", icon: FaCss3Alt },
   ];

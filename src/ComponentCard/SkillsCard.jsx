@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"; // Note: motion/react i
 import { X, Zap } from 'lucide-react';
 
 import {
-  FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGithub, FaAws,
+  FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGithub, 
 } from "react-icons/fa";
 import {
   SiJavascript, SiTypescript, SiTailwindcss, SiExpress,
@@ -28,7 +28,6 @@ const skills = {
   ],
   "Other Tools": [
     { name: "GitHub", percent: 88, icon: FaGithub, color: "text-black dark:text-white" },
-    { name: "AWS", percent: 70, icon: FaAws, color: "text-yellow-500" },
     { name: "Postman", percent: 85, icon: SiPostman, color: "text-orange-400" },
     { name: "VS Code", percent: 95, icon: VscVscode, color: "text-blue-400" },
     { name: "OpenAI", percent: 89, icon: SiOpenai, color: "text-emerald-400" },
