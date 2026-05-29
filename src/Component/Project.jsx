@@ -14,6 +14,14 @@ const projects = [
     live: '#',
   },
   {
+    title: 'Brain Training App',
+    description: 'A modern React-based Brain Training web app featuring the popular Sequence Memory game. Built to help users enhance their cognitive abilities through engaging pattern recall challenges.',
+    image: './brain-training-app.png',
+    tags: ['React', 'Tailwind', 'JavaScript','vite'],
+    link: 'https://github.com/Adarshsharma22/Brain-Training-App',
+    live: 'https://adarshsharma22.github.io/Brain-Training-App/',
+  },
+  {
     title: 'TodoList',
     description: 'Modern task management app built with React and AI tools to help manage daily tasks efficiently.',
     image: './todolist.png',
