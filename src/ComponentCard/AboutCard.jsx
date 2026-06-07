@@ -51,10 +51,10 @@ export const AboutCard = ({ onClick }) => {
           <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-slate-900 dark:text-white mb-2">
             Adarsh <span className="text-blue-600 dark:text-blue-500">Sharma</span>
           </h2>
-          <p className="text-lg md:text-xl text-blue-700 dark:text-blue-400/90 font-medium mb-4 md:mb-6">Full Stack Web Developer & AI Integrator</p>
+          <p className="text-lg md:text-xl text-blue-700 dark:text-blue-400/90 font-medium mb-4 md:mb-6">Full Stack Developer & AI Integrator</p>
 
           <p className="mb-6 md:mb-8 text-sm md:text-[16px] leading-relaxed text-slate-600 dark:text-white/70 max-w-2xl">
-            I am a passionate <span className="text-slate-900 dark:text-white font-semibold">Full Stack Web Developer</span> dedicated to building scalable, real-world applications.
+            I am a passionate <span className="text-slate-900 dark:text-white font-semibold">Full Stack Developer</span> dedicated to building scalable, real-world applications.
             I leverage <span className="text-blue-600 dark:text-blue-400 font-medium">AI tools</span> to enhance development workflows and create smarter, more efficient solutions.
             A quick learner with strong problem-solving skills, I strive to deliver high-impact digital products.
           </p>

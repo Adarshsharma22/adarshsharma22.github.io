@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'motion/react'
 import { Hero } from '../Component/Hero'
 import { Stats } from '../Component/Stats'
-import { MyMusic } from '../Component/Music'
+import { CurrentFocus } from '../Component/FocusOn'
 import { About } from '../Component/About'
 import { Skills } from '../Component/Skills'
 import { MyProject } from '../Component/Project'
@@ -46,7 +46,7 @@ export const Home = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="hidden md:block md:col-span-2 lg:col-span-2 md:row-span-1 hover:scale-102 transition-transform duration-500"
             >
-              <MyMusic />
+              <CurrentFocus />
             </motion.div>
 
             <motion.div
